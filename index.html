@@ -6,11 +6,31 @@
     <meta charset="utf-8">
     <title>Ana sayfa</title>
   </head>
+  <script type="text/javascript">
+    audio = new Audio();
+
+    audio.src = "ac.mp3";
+
+    audio.loop = true;
+
+    audio.play();
+
+    function play() {
+      audio.play();
+    }
+
+    function pause() {
+      audio.pause();
+    }
+</script>
   <body style="background-color:LightGray;">
     &#160;&#160;&#160;<button type="btn1" onclick="window.location='math1.html';" class="btn btn-primary">çokgenlerin özelikleri</button>&#160;&#160;&#160;
       &#160;&#160;&#160;<button type="btn2" onclick="window.location='math2.html';" class="btn btn-primary">hesap makinesi</button>&#160;&#160;&#160;
     &#160;&#160;&#160;<button type="btn3" onclick="window.location='math3.html';" class="btn btn-secondary"> hacim hesaplama </button>&#160;&#160;&#160;
     &#160;&#160;&#160;<button type="btn4" onclick="window.location='math4.html';" class="btn btn-danger"> alan hesaplama </button>&#160;&#160;&#160;
     &#160;&#160;&#160;<button type="btn5" onclick="window.location='math5.html';" class="btn btn-danger"> yüzde hesaplama </button>&#160;&#160;&#160;
+    &#160;&#160;&#160;<button type="btn6" onclick="play()" class="btn btn-dark"> başlat </button>&#160;&#160;&#160;
+    &#160;&#160;&#160;<button type="btn7" onclick="pause()" class="btn btn-light"> durdur </button>&#160;&#160;&#160;
+
   </body>
 </html>
