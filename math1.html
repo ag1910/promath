@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>Cokgen olarak bunlar yazılabilir:ucgen,kare,beşgen,altıgen,yedigen,sekizgen
+  <head>
     <meta charset="utf-8">
     <title>çokgenlerin özelikleri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body style="background-color:DodgerBlue;">
     <form name="Hesap">
       <label>Çokgen : </label>
-      <input type="text" id="num1"><br><br>
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          cokgen
+        </button>
+          </div>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">ücgen</a>
+          <a class="dropdown-item" href="#">kare</a>
+          <a class="dropdown-item" href="#">beşgen</a>
+          <a class="dropdown-item" href="#">altıgen</a>
+          <a class="dropdown-item" href="#">yedigen</a>
+          <a class="dropdown-item" href="#">sekizgen</a>
+        </div>
+
             <input type="button" id="btnA" value="nedir">
               <input type="button" id="btnC" value="C">
         </form>
@@ -27,9 +41,9 @@ var btnA=document.getElementById("btnA");
 btnA.onclick=myfunction()
 {
 if (num1=ucgen){
-  num1.innerHTML='ic acılarının toplamı:180
-        tek bir ic acısı:60'
-
+  num1.innerHTML='Kalan Karakter : z'
+(ic acılarının toplamı:180
+      tek bir ic acısı:60);
     }
 
       else if (num1=kare){alert(ic acılarının toplamı:360
