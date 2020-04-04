@@ -12,34 +12,45 @@ margin-top: 20px;
 </style>
     <meta charset="utf-8">
     <title>çokgenlerin özelikleri</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  </head>
-  <body style="background-color:DodgerBlue;">
-    <form name="Hesap">
-      <label>Çokgen : </label>
+     <div id="kutu" class="ortala">
+</head>
+<body style="background-color:DodgerBlue;">
+  <form name="Hesap">
+    <label>1. Sayı : </label>
     <input type="text" id="sayi1"><br><br>
           <input type="button" id="btnA" value="Bul">
-              <input type="button" id="btnC" value="C">
-        </form>
-        <br>
-        <div id="kutuAlan">
-    <script>
-          var btnC=document.getElementById("btnC");
-    btnC.onclick=function()
-   {
-    window.location.reload()
-   }
-  var btnA=document.getElementById("btnA");
+            <input type="button" id="btnC" value="C">
+      </form>
+      <br>
+      <div id="kutuAlan"></div>
+        <div id="kutuAlan1"></div>
+          <div id="kutuAlan2"></div>
+            <div id="kutuAlan3"></div>
+              <div id="kutuAlan4"></div>
+                <div id="kutuAlan5"></div>
+  <script>var btn1=document.getElementById("btnA");
+        var btnC=document.getElementById("btnC");
+  btnC.onclick=function()
+ {
+  window.location.reload()
+ }
+
+  var btn1=document.getElementById("btnA");
   btnA.onclick=function(){
       var s1=Number(document.getElementById("sayi1").value);
-      var icacito=(s1-2).180;
-var ucge=(s1-2);
-var kosegen=(s1-3);
-var koselam=s1*(s1-3)/2;
-var disacitop=360;
-var icaci=[(s1-2).180]/s1;
-var disaci=360/s1;
-      document.getElementById("kutuAlan").innerHTML="İc acılarının Toplamı : "+icacito;
+      var yüzde=s1-2;
+      var a=yüzde*180;
+var b=s1-2;
+var c=s1-3;
+var d=s1*c/2;
+var e=a/s1;
+var f=360/s1;
+      document.getElementById("kutuAlan").innerHTML="İc acılarının Toplamı : "+a;
+        document.getElementById("kutuAlan1").innerHTML="Ücgensel bölge sayısı : "+b;
+          document.getElementById("kutuAlan2").innerHTML="Köşegen sayısı(Bir köşeden) : "+c;
+            document.getElementById("kutuAlan3").innerHTML="Toplam köşegen sayısı : "+d;
+              document.getElementById("kutuAlan4").innerHTML="Bir dış acı : "+f;
+                document.getElementById("kutuAlan5").innerHTML="Bir ic acı : "+e;
     }
     </script>
         <button type="btn5" onclick="window.location='index.html';"class="btn btn-warning">Exit</button>
