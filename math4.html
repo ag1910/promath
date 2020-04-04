@@ -16,7 +16,7 @@
   </head>
   <body style="background-color:Orange;">
     <form name="Hesap">
-      <label>1.kenar(köşegen) : </label>
+      <label>1.kenar(köşegen,yarıçap) : </label>
       <input type="text" id="sayi1"><br><br>
             <label>Uzunluğu : </label>
             <input type="text" id="sayi2"><br><br>
@@ -26,6 +26,7 @@
                   <input type="button" id="btnB" value="Alan(eşkenardörtgen,yükseklikten hesaplama)">
                         <input type="button" id="btnD" value="Alan(eşkenardörtgen,köşegenden hesaplama)">
                               <input type="button" id="btnE" value="Alan(yamuk)">
+                              <input type="button" id="btnF" value="Alan(daire)">
               <input type="button" id="btnC" value="C">
         </form>
         <br>
@@ -69,14 +70,14 @@
           document.getElementById("kutuAlan").innerHTML="Girilen Eşkenardörtgenin Alanı : "+c;
 
       }
-      var btn4=document.getElementById("btnE");
-      btn4.onclick=function(){
+
+      var btn5=document.getElementById("btnF");
+      btn5.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
           var s3=Number(document.getElementById("sayi3").value);
-          var d=s1+s3;
-          var e=d*s2;
-          var f=e/2;
+          var pi=22/7;
+          var pil=2*s1*pi;
 
           document.getElementById("kutuAlan").innerHTML="Girilen Yamuğun Alanı : "+f;
 
