@@ -16,16 +16,25 @@
   </head>
   <body style="background-color:Orange;">
     <form name="Hesap">
-      <label>1. Sayı : </label>
+      <label>1.kenar(köşegen) : </label>
       <input type="text" id="sayi1"><br><br>
-            <label>2. Sayı : </label>
+            <label>Uzunluğu : </label>
             <input type="text" id="sayi2"><br><br>
-            <input type="button" id="btnA" value="ALAN">
+            <label>2.kenar(köşegen) : </label>
+            <input type="text" id="sayi3"><br><br>
+            <input type="button" id="btnA" value="Alan(kare,dikdörtgen)">
+                  <input type="button" id="btnB" value="Alan(eşkenardörtgen,yükseklikten hesaplama)">
+                        <input type="button" id="btnD" value="Alan(eşkenardörtgen,köşegenden hesaplama)">
+                              <input type="button" id="btnE" value="Alan(yamuk)">
               <input type="button" id="btnC" value="C">
         </form>
         <br>
         <div id="kutuAlan"></div>
-    <script>var btn1=document.getElementById("btnA");
+    <script>
+    var btn1=document.getElementById("btnA");
+    var btn2=document.getElementById("btnB");
+    var btn3=document.getElementById("btnD");
+        var btn4=document.getElementById("btnE");
           var btnC=document.getElementById("btnC");
     btnC.onclick=function()
    {
@@ -37,7 +46,39 @@
           var s2=Number(document.getElementById("sayi2").value);
           var alan=s1*s2;
 
-          document.getElementById("kutuAlan").innerHTML="Girilen Sayıların Alanı : "+alan;
+          document.getElementById("kutuAlan").innerHTML="Girilen Kare,Diktörgenin Alanı : "+alan;
+
+      }
+      var btn2=document.getElementById("btnB");
+      btn2.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var a=s1*s2;
+
+          document.getElementById("kutuAlan").innerHTML="Girilen Eşkenardörtgenin Alanı : "+a;
+
+      }
+      var btn3=document.getElementById("btnD");
+      btn3.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+            var s3=Number(document.getElementById("sayi3").value);
+          var b=s1*s3;
+          var c=b/2;
+
+          document.getElementById("kutuAlan").innerHTML="Girilen Eşkenardörtgenin Alanı : "+c;
+
+      }
+      var btn4=document.getElementById("btnE");
+      btn4.onclick=function(){
+          var s1=Number(document.getElementById("sayi1").value);
+          var s2=Number(document.getElementById("sayi2").value);
+          var s3=Number(document.getElementById("sayi3").value);
+          var d=s1+s3;
+          var e=d*s2;
+          var f=e/2;
+
+          document.getElementById("kutuAlan").innerHTML="Girilen Yamuğun Alanı : "+f;
 
       }
         </script>
