@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr"><link href="style.css" type="text/css" rel="stylesheet">
   <head>
+     <style>
+#kutu {
+width: 1000px;
+padding: 50px 0;
+text-align: center;
+background-color: PaleGreen;
+margin-top: 20px;
+}
+</style>
     <meta charset="utf-8">
     <title>çokgenlerin özelikleri</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -8,62 +17,32 @@
   <body style="background-color:DodgerBlue;">
     <form name="Hesap">
       <label>Çokgen : </label>
-      <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          cokgen
-        </button>
-          </div>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">ücgen</a>
-          <a class="dropdown-item" href="#">kare</a>
-          <a class="dropdown-item" href="#">beşgen</a>
-          <a class="dropdown-item" href="#">altıgen</a>
-          <a class="dropdown-item" href="#">yedigen</a>
-          <a class="dropdown-item" href="#">sekizgen</a>
-        </div>
-
-            <input type="button" id="btnA" value="nedir">
+    <input type="text" id="sayi1"><br><br>
+          <input type="button" id="btnA" value="Bul">
               <input type="button" id="btnC" value="C">
         </form>
         <br>
-        <div id="kutuAlan"></div>
+        <div id="kutuAlan">
     <script>
           var btnC=document.getElementById("btnC");
     btnC.onclick=function()
    {
     window.location.reload()
    }
-   </script>
-
-<script>
-var num1=document.getElementById("num1");
-var btnA=document.getElementById("btnA");
-btnA.onclick=myfunction()
-{
-if (num1=ucgen){
-  num1.innerHTML='Kalan Karakter : z'
-(ic acılarının toplamı:180
-      tek bir ic acısı:60);
-    }
-
-      else if (num1=kare){alert(ic acılarının toplamı:360
-        tek bir ic acısı:90);
-      }
-      else if (num1=beşgen){alert(ic acılarının toplamı:540
-        tek bir ic acısı:108);
-      }
-      else if (num1=altıgen){alert(ic acılarının toplamı:720
-        tek bir ic acısı:120);
-      }
-      else if (num1=yedigen){alert(ic acılarının toplamı:900
-        tek bir ic acısı:128,5);
-      }
-      else if (num1=sekizgen){alert(ic acılarının toplamı:1080
-        tek bir ic acısı:135);
-      }
+  var btnA=document.getElementById("btnA");
+  btnA.onclick=function(){
+      var s1=Number(document.getElementById("sayi1").value);
+      var icacito=(s1-2).180;
+var ucge=(s1-2);
+var kosegen=(s1-3);
+var koselam=s1*(s1-3)/2;
+var disacitop=360;
+var icaci=[(s1-2).180]/s1;
+var disaci=360/s1;
+      document.getElementById("kutuAlan").innerHTML="İc acılarının Toplamı : "+icacito;
     }
     </script>
         <button type="btn5" onclick="window.location='index.html';"class="btn btn-warning">Exit</button>
-
+</div>
 </body>
 </html>
