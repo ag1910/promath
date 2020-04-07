@@ -37,7 +37,8 @@
       btn1.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var yüzde=s1*s2/100;
+          var yüz=s1*s2;
+          var yüzde=yüz/100;
 
           document.getElementById("kutuAlan").innerHTML="Sonuç : "+yüzde;
 
@@ -49,8 +50,9 @@
       btn3.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-            var yüzde=s1*s2/100;
-          var fark=s2-yüzde;
+          var yüz=s1*s2;
+            var yüzde=yüz/100;
+          var fark=s1-yüzde;
 
           document.getElementById("kutuFark").innerHTML="Sonuç : "+fark;
 
@@ -62,8 +64,9 @@
       btn4.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-            var yüzde=s1*s2/100;
-          var toplam=yüzde+s2;
+          var yüz=s1*s2;
+            var yüzde=yüz/100;
+          var toplam=yüzde+s1;
 
           document.getElementById("kutuToplam").innerHTML="Sonuç : "+toplam;
 
