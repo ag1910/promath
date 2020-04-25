@@ -15,19 +15,21 @@
   </head>
   <body style="background-color:MediumSeaGreen;">
     <form name="Hesap">
-      <label>1. Sayı : </label>
+      <label>X : </label>
       <input type="text" id="sayi1"><br><br>
-            <label>2. Sayı : </label>
+            <label>Y : </label>
             <input type="text" id="sayi2"><br><br>
             <input type="button" id="btn1" value="x'in %y'si kactır?">
-                    <input type="button" id="btn3" value="x, %y kadar azaltılırsa kaç olur?">
-                        <input type="button" id="btn4" value="x, %y kadar artırılırsa kaç olur?">
+                    <input type="button" id="btn3" value="x, %y kadar azaltılırsa/artırılırsa kaç olur?">
+                        <input type="button" id="btn5" value="bir sayının %x kadarı y olur?">
 
 
               <input type="button" id="btnC" value="C">
         </form>
         <br>
         <div id="kutuAlan"></div>
+
+        <div id="kutuAla"></div>
     <script>var btn1=document.getElementById("btn1");
           var btnC=document.getElementById("btnC");
     btnC.onclick=function()
@@ -37,38 +39,38 @@
       btn1.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var yüz=s1*s2;
-          var yüzde=yüz/100;
+          var yüze=s1*s2;
+          var yüzd=yüze/100;
 
-          document.getElementById("kutuAlan").innerHTML="Sonuç : "+yüzde;
+          document.getElementById("kutuAlan").innerHTML="x'in %y'si : "+yüzd;
 
       }
-              </script>
-      <div id="kutuFark"></div>
-      <script>
+
       var btn3=document.getElementById("btn3");
       btn3.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var yüz=s1*s2;
-            var yüzde=yüz/100;
-          var fark=s1-yüzde;
+          var yüzr=s1*s2;
+            var yüzder=yüzr/100;
+          var fark=s1-yüzder;
+          var dark=s1+yüzder;
 
-          document.getElementById("kutuFark").innerHTML="Sonuç : "+fark;
+          document.getElementById("kutuAlan").innerHTML="x, %y kadar azaltılırsa : "+fark;
+          document.getElementById("kutuAla").innerHTML="x, %y kadar artırılırsa : "+dark;
+
 
       }
-              </script>
-      <div id="kutuToplam"></div>
-      <script>
-      var btn4=document.getElementById("btn4");
-      btn4.onclick=function(){
+
+
+      var btn5=document.getElementById("btn5");
+      btn5.onclick=function(){
           var s1=Number(document.getElementById("sayi1").value);
           var s2=Number(document.getElementById("sayi2").value);
-          var yüz=s1*s2;
-            var yüzde=yüz/100;
-          var toplam=yüzde+s1;
+          var yüz=s2*100;
+            var yüzde=yüz/s1;
 
-          document.getElementById("kutuToplam").innerHTML="Sonuç : "+toplam;
+
+          document.getElementById("kutuAlan").innerHTML="bir sayı : "+yüzde;
 
       }
         </script>

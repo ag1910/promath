@@ -1,40 +1,28 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <h1>sayı tahmin oyunu</h1>
+<head>
+<title>sayı tahmin oyunu</title>
+<script type="text/javascript">
 
-  </head>
-  <body style="background-color:DodgerBlue;">
+ uretilen= Math.floor(Math.random()*100)+1;
 
-    <script type="text/javascript" language="javascript">
-        var sayi,tahmin,hak=1,i=0;;
-        sayi=Math.round(Math.random()*100);
-        do
-        {
-            tahmin=parseInt(prompt("Tahmini Giriniz: "));
-            if (tahmin<sayi)
-            {
-                document.write("Daha büyük bir sayı giriniz.<br>");
-            }
-            if (tahmin>sayi)
-            {
-                document.write("Daha küçük bir sayı giriniz.<br>");
-            }
-            if (tahmin==sayi)
-            {
-            document.write("Tebrikler bildiniz. Tuttuğum sayı: "+ sayi + "<br>");
-            document.write(hak + ". hakkınızda bildiniz.");
-            }
-        hak++;
-        }
-        while ((tahmin!=sayi) && hak<10)
-        if (hak>10)
-        {
-            document.write("Hakkınız kalmadı. Tutulan sayı : "+ sayi + "<br>");
-        }
-    </script>
-<button type="btn5" onclick="window.location='index.html';"class="btn btn-warning">Exit</button>
+while(1)
+{
+  sayi= prompt('Bir sayı giriniz:');
+   if (sayi>uretilen)
+   alert('Büyük sayı girdiniz');
 
-  </body>
-</html>﻿﻿
+   else if (sayi<uretilen)
+   alert('Küçük sayı girdiniz');
+
+   else if (sayi==uretilen){
+  alert('Tebrikler bildiniz'); break;
+}
+
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>
